@@ -1,0 +1,6 @@
+
+wei数组转成真数组  [].slice.call(this);
+
+Array.from(this) //es6
+
+

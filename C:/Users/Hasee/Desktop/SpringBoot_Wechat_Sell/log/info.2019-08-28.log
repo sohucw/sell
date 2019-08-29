@@ -1,0 +1,12 @@
+Starting LoggerTest on MacBook-Pro-2.local with PID 36336 (started by baidu in /Users/baidu/Desktop/wan/sell)
+No active profile set, falling back to default profiles: default
+Initializing ExecutorService 'applicationTaskExecutor'
+Started LoggerTest in 4.107 seconds (JVM running for 5.807)
+name: chjenjianwei
+Shutting down ExecutorService 'applicationTaskExecutor'
+Starting LoggerTest on MacBook-Pro-2.local with PID 36342 (started by baidu in /Users/baidu/Desktop/wan/sell)
+No active profile set, falling back to default profiles: default
+Initializing ExecutorService 'applicationTaskExecutor'
+Started LoggerTest in 3.087 seconds (JVM running for 4.75)
+name: chjenjianwei
+Shutting down ExecutorService 'applicationTaskExecutor'

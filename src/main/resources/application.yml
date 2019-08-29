@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Dricer
+    username: root
+    password:
+    url: jdbc:mysql://127.0.0.1:3306/sell?chartcterEncoding-utf-8&useSSL=false
+  jpa:
+    show-sql: true
+server:
+  servlet:
+    context-path: /sell
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+#  path: /Users/baidu/Desktop/wan/sell/logs/
+#  file: /Users/baidu/Desktop/wan/sell/logs/
