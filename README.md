@@ -1,3 +1,10 @@
+## 第三方软件
+[nginx安装](https://www.cnblogs.com/meng1314-shuai/p/8335140.html)
+- nginx 启动
+- nginx -s relaod 重启
+- nginx -s stop
+
+
 ## Sql语句
 ``` sql
 -- 类目
