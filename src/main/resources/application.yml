@@ -7,6 +7,8 @@ spring:
   jpa:
     show-sql: true
     open-in-view: true
+#  jackson:
+#    default-property-inclusion: non_null  是null的字段不返回
 #    properties:
 #      hibernate:
 #        enable_lazy_load_no_trans=true:
@@ -18,5 +20,12 @@ spring:
 server:
   servlet:
     context-path: /sell
-  port: 9000
+  port: 8080
 #  file: /Users/baidu/Desktop/wan/sell/logs/
+
+wechat:
+  mpAppId: wx33f8afccdd1a3a9b
+  mpAppSecret: 6016b39b93b736a1aa5582fbcdbc4ae8
+  mchId: 1404269502
+  mchKey:
+  keyPath:

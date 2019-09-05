@@ -4,6 +4,54 @@
 - nginx -s relaod 重启
 - nginx -s stop
 
+[内网穿透软件](https://natapp.cn/tunnel/lists)
+
+## 微信相关
+设置域名 内网穿透的工具natapp
+
+步骤
+1. https://mp.weixin.qq.com/cgi-bin/settingpage?t=setting/index&action=index&token=313043450&lang=zh_CN
+公众号设置-》功能设置-》JS接口安全域名
+2. https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421140842
+
+
+第一步调用
+
+appID = wx33f8afccdd1a3a9b
+REDIRECT_URI = http://3bgt3v.natappfree.cc/sell/weixin/auth
+https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&redirect_uri=REDIRECT_URI&response_type=code&
+scope=snsapi_base&state=STATE#wechat_redirect
+
+
+2. REDIRECT_URI？code=XX&state=Xx
+
+
+https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code
+这个接口的返回值
+
+{
+    "access_token":"ACCESS_TOKEN",
+    "expires_in":7200,
+    "refresh_token":"REFRESH_TOKEN",
+    "openid":"OPENID",
+    "scope":"SCOPE" 
+ }
+
+
+
+## 部署前端代码
+cp -r dist/*  /opt/data/wwwroot/sell/
+
+yes
+yes
+
+使用代理 抓包
+手机的请求转发到电脑上  通过电脑进行访问
+
+charles
+
+
+
 
 ## Sql语句
 ``` sql

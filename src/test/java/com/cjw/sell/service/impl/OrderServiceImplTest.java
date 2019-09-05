@@ -2,12 +2,16 @@ package com.cjw.sell.service.impl;
 
 import com.cjw.sell.dto.OrderDto;
 import com.cjw.sell.entity.OrderDetail;
+import com.cjw.sell.enums.PayStatusEnum;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.annotation.Transient;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -62,21 +66,41 @@ public class OrderServiceImplTest {
 
     @Test
     public void findOne() {
+        OrderDto one = orderService.findOne("1567132346283643041");
+        log.info("查询单个订单 result={}", one);
+        // System.out.println(one.getBuyerName());
     }
 
     @Test
     public void findList() {
+        Page<OrderDto> buyerOpenId = orderService.findList("110110", PageRequest.of(0, 2));
+        log.info("查询list buyerOpenId {}",buyerOpenId.getTotalElements());
     }
 
     @Test
     public void cancel() {
+        OrderDto one = orderService.findOne("1567132346283643041");
+
+        OrderDto cancel = orderService.cancel(one);
+        log.info("取消订单 orderStatue={}", cancel.getOrderStatus());
     }
 
     @Test
     public void finish() {
+        // 判断订单状态
+        OrderDto one = orderService.findOne("1567132346283643041");
+        OrderDto cancel = orderService.finish(one);
+        log.info("完结订单 orderStatue={}", cancel.getOrderStatus());
+        // 修改状态
+        //
     }
 
     @Test
     public void paid() {
+        // 判断订单状态
+        OrderDto one = orderService.findOne("1567132346283643041");
+        OrderDto cancel = orderService.finish(one);
+        log.info("支付订单 orderStatue={}", cancel.getOrderStatus());
+        Assert.assertEquals(PayStatusEnum.SUCCESS, cancel.getOrderStatus());
     }
 }

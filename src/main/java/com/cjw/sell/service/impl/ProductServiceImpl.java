@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * @param <T>
+ * @param <>
  * @Author: chenjianwei
  * @Description:
  * @Date: Created in 17:18 2019-08-29
@@ -50,6 +50,15 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void increaseStock(List<CartDto> cartDtoList) {
 
+        for(CartDto cartDto: cartDtoList) {
+            ProductInfo productInfo = productInfoDao.getOne(cartDto.getProductId());
+            if(productInfo == null) {
+                throw  new SellException(ResultEnum.PRODUCT_NOT_EXIST);
+            }
+            int num = productInfo.getProductStock() + cartDto.getProductQuantity();
+            productInfo.setProductStock(num);
+            productInfoDao.save(productInfo);
+        }
     }
 
     @Override
