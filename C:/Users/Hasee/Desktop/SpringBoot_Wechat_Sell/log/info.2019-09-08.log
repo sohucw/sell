@@ -1,0 +1,13 @@
+HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m47s225ms).
+HikariPool-1 - Retrograde clock change detected (housekeeper delta=24s945ms), soft-evicting connections from pool.
+HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54m13s418ms).
+HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m32s682ms).
+HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=40m6s179ms).
+HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=44m40s338ms).
+HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m51s382ms).
+HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52m57s473ms).
+HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m26s502ms).
+HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53m45s740ms).
+HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m46s90ms).
+HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s339ms), soft-evicting connections from pool.
+HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m7s76ms).
